@@ -7,13 +7,20 @@
 <body class="">
 
   <nav id="navbar" class="navbar is-primary has-shadow is-spaced">
-    <div class="navbar-start">
-      Code related creations by Aku Inu
-    </div>
-    <div class="navbar-end">
-      <a class="navbar-item" href="https://www.instagram.com/akuinucreations/"><i class="fab fa-instagram"></i></a>
-      <a class="navbar-item" href="https://www.twitch.tv/aku_inu/"><i class="fab fa-twitch"></i></a>
-      <a class="navbar-item" href="https://github.com/akuinu/"><i class="fab fa-github"></i></a>
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+    <div class="navbar-menu">
+      <div class="navbar-start">
+        Code related creations by Aku Inu
+      </div>
+      <div class="navbar-end">
+        <a class="navbar-item" href="https://www.instagram.com/akuinucreations/"><i class="fab fa-instagram"></i></a>
+        <a class="navbar-item" href="https://www.twitch.tv/aku_inu/"><i class="fab fa-twitch"></i></a>
+        <a class="navbar-item" href="https://github.com/akuinu/"><i class="fab fa-github"></i></a>
+      </div>
     </div>
   </nav>
   <section class="hero">
@@ -32,16 +39,16 @@
       <div class="card">
         <header class="card-header">
           <p class="card-header-title">
-            Twitch player que
+            Twitch player queue
           </p>
         </header>
         <div class="card-content">
           <div class="content">
-            Player que for Twitch streamers. User can setup a keyword to join the que, send wispers to people that have joined, maker peoples that have already played and some more.
+            Player queue for Twitch streamers. User can setup a keyword to join the queue, send wispers to people that have joined, maker peoples that have already played and some more.
           </div>
         </div>
         <footer class="card-footer">
-          <a class="card-footer-item" href="/playerque.html"> Use it here</i></a>
+          <a class="card-footer-item" href="/twitch-player-queue"> Use it here</i></a>
           <a class="card-footer-item" href="https://github.com/akuinu/"><i class="fab fa-github"> Source</i></a>
         </footer>
       </div>
@@ -71,7 +78,7 @@
         </header>
         <div class="card-content">
           <div class="content">
-            Twitch Plays Minesweeper is a collaboration with Pascal from twitch. Well known game of Minesweeper played by Twitch chat using commands.
+            Twitch Plays Minesweeper is a collaboration with Pascal from twitch. Well know game of Minesweeper played by Twitch chat using commands.
           </div>
         </div>
         <footer class="card-footer">
@@ -102,5 +109,32 @@
   <div class="content has-text-centered">
     Site powered by <a href="https://pages.github.com/">Github</a>, <a href="https://bulma.io/">Bulma</a> and <a href="https://fontawesome.com/">Fontawesome</a>.
   </div>
+  <script type="text/javascript">
+  document.addEventListener('DOMContentLoaded', () => {
+
+    // Get all "navbar-burger" elements
+    const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+    // Check if there are any navbar burgers
+    if ($navbarBurgers.length > 0) {
+
+      // Add a click event on each of them
+      $navbarBurgers.forEach( el => {
+        el.addEventListener('click', () => {
+
+          // Get the target from the "data-target" attribute
+          const target = el.dataset.target;
+          const $target = document.getElementById(target);
+
+          // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+          el.classList.toggle('is-active');
+          $target.classList.toggle('is-active');
+
+        });
+      });
+    }
+
+  });
+  </script>
 </footer>
 </html>
